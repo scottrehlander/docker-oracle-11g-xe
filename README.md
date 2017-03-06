@@ -9,7 +9,7 @@ This repository uses Oracle Express Edition 11g Release 2 and Ubuntu 14.04 LTS (
 ### How-To: Install and Use
 
 ```
-docker build -t broad/adlp-resultdb-oracle11g .
+docker build -t <insert desired docker container name here> .
 ```
 **Note:** It's important to run Oracle XE with >1GB shared memory.
 
@@ -17,7 +17,7 @@ docker build -t broad/adlp-resultdb-oracle11g .
 Running Oracle XE in `detached` mode with `1521` and `8080` ports opened and `2GB` shared memory:
 
 ```
-docker run -d --shm-size=2g -p 1521:1521 -p 8080:8080 broad/adlp-result-db-oracle11g
+docker run -d --shm-size=2g -p 1521:1521 -p 8080:8080 <insert docker container name here>
 ```
 
 ### You can optionally start Oracle XE and execute SQL on startup
@@ -25,7 +25,7 @@ docker run -d --shm-size=2g -p 1521:1521 -p 8080:8080 broad/adlp-result-db-oracl
 Put your `*.sql` files for database init into some local folder and mount this folder during container startup to `/etc/entrypoint-initdb.d` volume.
 
 ```
-docker run -d --shm-size=1g -p 8080:8080 -p 1521:1521 -v /local-initdb:/etc/entrypoint-initdb.d broad/adlp-result-db-oracle11g
+docker run -d --shm-size=1g -p 8080:8080 -p 1521:1521 -v /local-initdb:/etc/entrypoint-initdb.d <insert docker container name here>
 ```
 
 ### Connect
