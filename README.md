@@ -8,9 +8,12 @@ This repository uses Oracle Express Edition 11g Release 2 and Ubuntu 14.04 LTS (
 
 ### How-To: Install and Use
 
+Download the contents of the repository and cd to the base directory then execute:
+
 ```
 docker build -t <insert desired docker container name here> .
 ```
+**Note:** The Oracle installation may ask you to confirm that it should run on OS startup, choose yes.
 **Note:** It's important to run Oracle XE with >1GB shared memory.
 
 ### Start Oracle XE
